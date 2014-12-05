@@ -153,7 +153,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "[远程VPN账号获取] eHaier.Com 前端UED 荣誉出品";
+            this.Text = "[远程VPN账号获取] ImYY.Org 前端UED 荣誉出品";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.groupBox1.ResumeLayout(false);
