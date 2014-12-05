@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // 特性集控制。更改这些特性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("GetFreeVPNAccount")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("一键获取VPN账号和密码")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyCompany("eHaier.Com")]
 [assembly: AssemblyProduct("GetFreeVPNAccount")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2014")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCopyright("Copyright © 2014 www.imyy.org")]
+[assembly: AssemblyTrademark("IMYY")]
 [assembly: AssemblyCulture("")]
 
 // 将 ComVisible 设置为 false 使此程序集中的类型
