@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.BtnGetOneKey = new System.Windows.Forms.Button();
-            this.LabAccount = new System.Windows.Forms.Label();
-            this.LabPassword = new System.Windows.Forms.Label();
-            this.TxtAccount = new System.Windows.Forms.TextBox();
-            this.TxtPassword = new System.Windows.Forms.TextBox();
-            this.BtnCopyAccount = new System.Windows.Forms.Button();
-            this.BtnCopyPassword = new System.Windows.Forms.Button();
             this.LabInfo = new System.Windows.Forms.Label();
+            this.BtnCopyPassword = new System.Windows.Forms.Button();
+            this.BtnCopyAccount = new System.Windows.Forms.Button();
+            this.TxtPassword = new System.Windows.Forms.TextBox();
+            this.TxtAccount = new System.Windows.Forms.TextBox();
+            this.LabPassword = new System.Windows.Forms.Label();
+            this.LabAccount = new System.Windows.Forms.Label();
+            this.BtnGetOneKey = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,35 +59,46 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "操作说明：点击【一键获取】就OK！ IP:106.187.93.193";
             // 
-            // BtnGetOneKey
+            // LabInfo
             // 
-            this.BtnGetOneKey.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BtnGetOneKey.ForeColor = System.Drawing.Color.Red;
-            this.BtnGetOneKey.Location = new System.Drawing.Point(23, 34);
-            this.BtnGetOneKey.Name = "BtnGetOneKey";
-            this.BtnGetOneKey.Size = new System.Drawing.Size(106, 63);
-            this.BtnGetOneKey.TabIndex = 0;
-            this.BtnGetOneKey.Text = "一键获取";
-            this.BtnGetOneKey.UseVisualStyleBackColor = true;
-            this.BtnGetOneKey.Click += new System.EventHandler(this.BtnGetOneKey_Click);
+            this.LabInfo.AutoSize = true;
+            this.LabInfo.ForeColor = System.Drawing.Color.Red;
+            this.LabInfo.Location = new System.Drawing.Point(183, 107);
+            this.LabInfo.Name = "LabInfo";
+            this.LabInfo.Size = new System.Drawing.Size(95, 12);
+            this.LabInfo.TabIndex = 5;
+            this.LabInfo.Text = "Kvkens 荣誉出品";
             // 
-            // LabAccount
+            // BtnCopyPassword
             // 
-            this.LabAccount.AutoSize = true;
-            this.LabAccount.Location = new System.Drawing.Point(148, 43);
-            this.LabAccount.Name = "LabAccount";
-            this.LabAccount.Size = new System.Drawing.Size(41, 12);
-            this.LabAccount.TabIndex = 1;
-            this.LabAccount.Text = "账号：";
+            this.BtnCopyPassword.Location = new System.Drawing.Point(347, 77);
+            this.BtnCopyPassword.Name = "BtnCopyPassword";
+            this.BtnCopyPassword.Size = new System.Drawing.Size(37, 23);
+            this.BtnCopyPassword.TabIndex = 4;
+            this.BtnCopyPassword.Text = "Copy";
+            this.BtnCopyPassword.UseVisualStyleBackColor = true;
+            this.BtnCopyPassword.Click += new System.EventHandler(this.BtnCopyPassword_Click);
             // 
-            // LabPassword
+            // BtnCopyAccount
             // 
-            this.LabPassword.AutoSize = true;
-            this.LabPassword.Location = new System.Drawing.Point(148, 81);
-            this.LabPassword.Name = "LabPassword";
-            this.LabPassword.Size = new System.Drawing.Size(41, 12);
-            this.LabPassword.TabIndex = 2;
-            this.LabPassword.Text = "密码：";
+            this.BtnCopyAccount.Location = new System.Drawing.Point(347, 38);
+            this.BtnCopyAccount.Name = "BtnCopyAccount";
+            this.BtnCopyAccount.Size = new System.Drawing.Size(37, 23);
+            this.BtnCopyAccount.TabIndex = 3;
+            this.BtnCopyAccount.Text = "Copy";
+            this.BtnCopyAccount.UseVisualStyleBackColor = true;
+            this.BtnCopyAccount.Click += new System.EventHandler(this.BtnCopyAccount_Click);
+            // 
+            // TxtPassword
+            // 
+            this.TxtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TxtPassword.Location = new System.Drawing.Point(185, 77);
+            this.TxtPassword.Name = "TxtPassword";
+            this.TxtPassword.ReadOnly = true;
+            this.TxtPassword.Size = new System.Drawing.Size(156, 21);
+            this.TxtPassword.TabIndex = 2;
+            this.TxtPassword.Text = "请点击“一键获取”！";
+            this.TxtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtAccount
             // 
@@ -101,46 +112,35 @@
             this.TxtAccount.Text = "请点击“一键获取”！";
             this.TxtAccount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // TxtPassword
+            // LabPassword
             // 
-            this.TxtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TxtPassword.Location = new System.Drawing.Point(185, 77);
-            this.TxtPassword.Name = "TxtPassword";
-            this.TxtPassword.ReadOnly = true;
-            this.TxtPassword.Size = new System.Drawing.Size(156, 21);
-            this.TxtPassword.TabIndex = 2;
-            this.TxtPassword.Text = "请点击“一键获取”！";
-            this.TxtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.LabPassword.AutoSize = true;
+            this.LabPassword.Location = new System.Drawing.Point(148, 81);
+            this.LabPassword.Name = "LabPassword";
+            this.LabPassword.Size = new System.Drawing.Size(41, 12);
+            this.LabPassword.TabIndex = 2;
+            this.LabPassword.Text = "密码：";
             // 
-            // BtnCopyAccount
+            // LabAccount
             // 
-            this.BtnCopyAccount.Location = new System.Drawing.Point(347, 38);
-            this.BtnCopyAccount.Name = "BtnCopyAccount";
-            this.BtnCopyAccount.Size = new System.Drawing.Size(37, 23);
-            this.BtnCopyAccount.TabIndex = 3;
-            this.BtnCopyAccount.Text = "Copy";
-            this.BtnCopyAccount.UseVisualStyleBackColor = true;
-            this.BtnCopyAccount.Click += new System.EventHandler(this.BtnCopyAccount_Click);
+            this.LabAccount.AutoSize = true;
+            this.LabAccount.Location = new System.Drawing.Point(148, 43);
+            this.LabAccount.Name = "LabAccount";
+            this.LabAccount.Size = new System.Drawing.Size(41, 12);
+            this.LabAccount.TabIndex = 1;
+            this.LabAccount.Text = "账号：";
             // 
-            // BtnCopyPassword
+            // BtnGetOneKey
             // 
-            this.BtnCopyPassword.Location = new System.Drawing.Point(347, 77);
-            this.BtnCopyPassword.Name = "BtnCopyPassword";
-            this.BtnCopyPassword.Size = new System.Drawing.Size(37, 23);
-            this.BtnCopyPassword.TabIndex = 4;
-            this.BtnCopyPassword.Text = "Copy";
-            this.BtnCopyPassword.UseVisualStyleBackColor = true;
-            this.BtnCopyPassword.Click += new System.EventHandler(this.BtnCopyPassword_Click);
-            // 
-            // LabInfo
-            // 
-            this.LabInfo.AutoSize = true;
-            this.LabInfo.ForeColor = System.Drawing.Color.Red;
-            this.LabInfo.Location = new System.Drawing.Point(183, 107);
-            this.LabInfo.Name = "LabInfo";
-            this.LabInfo.Size = new System.Drawing.Size(95, 12);
-            this.LabInfo.TabIndex = 5;
-            this.LabInfo.Text = "Kvkens 荣誉出品";
+            this.BtnGetOneKey.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.BtnGetOneKey.ForeColor = System.Drawing.Color.Red;
+            this.BtnGetOneKey.Location = new System.Drawing.Point(23, 34);
+            this.BtnGetOneKey.Name = "BtnGetOneKey";
+            this.BtnGetOneKey.Size = new System.Drawing.Size(106, 63);
+            this.BtnGetOneKey.TabIndex = 0;
+            this.BtnGetOneKey.Text = "一键获取";
+            this.BtnGetOneKey.UseVisualStyleBackColor = true;
+            this.BtnGetOneKey.Click += new System.EventHandler(this.BtnGetOneKey_Click);
             // 
             // FrmMain
             // 
@@ -153,7 +153,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "[远程VPN账号获取] ImYY.Org 前端UED 荣誉出品";
+            this.Text = "[远程VPN账号获取] WwW.ImYY.Org 荣誉出品";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.groupBox1.ResumeLayout(false);

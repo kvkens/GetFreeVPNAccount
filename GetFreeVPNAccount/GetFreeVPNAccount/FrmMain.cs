@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
 
@@ -19,6 +20,7 @@ namespace GetFreeVPNAccount
         DotNet.Utilities.HttpHelper httphelper = new DotNet.Utilities.HttpHelper();
         DotNet.Utilities.HttpItem httpitem = new DotNet.Utilities.HttpItem();
         DotNet.Utilities.HttpResult httpresult = new DotNet.Utilities.HttpResult();
+        string version = Assembly.GetExecutingAssembly().GetName().Version.ToString();
         public FrmMain()
         {
             InitializeComponent();
@@ -26,7 +28,7 @@ namespace GetFreeVPNAccount
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-
+            LabInfo.Text = "Kvkens 荣誉出品 当前版本：" + version;
         }
 
         private void BtnCopyAccount_Click(object sender, EventArgs e)
@@ -103,6 +105,7 @@ namespace GetFreeVPNAccount
             {
                 TxtAccount.Text = UserEntity.Username;
                 TxtPassword.Text = UserEntity.Password1;
+                LabInfo.Text = "获取成功，请复制使用！";
             }
             
         }
