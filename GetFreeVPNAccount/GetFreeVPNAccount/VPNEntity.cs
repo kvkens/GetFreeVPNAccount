@@ -131,7 +131,15 @@ namespace GetFreeVPNAccount
             get { return username; }
             set { username = value; }
         }
-
+        private string html;
+        /// <summary>
+        /// 完整的HTML
+        /// </summary>
+        public string Html
+        {
+            get { return html; }
+            set { html = value; }
+        }
 
     }
 }

@@ -9,13 +9,14 @@ using System.Linq;
 using System.Net;
 using System.Reflection;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace GetFreeVPNAccount
 {
     public partial class FrmMain : Form
     {
-        public delegate void UpdateText();
+        public delegate void UpdateRegisterText(VPNEntity entity);
         public string URL = "http://user.tosver.com/reg.php?cont=store_user";
         VPNEntity UserEntity = new VPNEntity();
         Tools tools = new Tools();
@@ -48,7 +49,9 @@ namespace GetFreeVPNAccount
         }
         private void BtnGetOneKey_Click(object sender, EventArgs e)
         {
-            ExecuteOneKey();
+            Thread GoOneKeyThread = new Thread(new ThreadStart(ExecuteOneKey));
+            GoOneKeyThread.Start();
+            //ExecuteOneKey();
         }
         public void ExecuteOneKey()
         {
@@ -67,9 +70,16 @@ namespace GetFreeVPNAccount
             {
                 if (httpresult.Html.IndexOf("您的账户已经创建") != -1)
                 {
-                    TxtAccount.Text = UserEntity.Username;
-                    TxtPassword.Text = UserEntity.Password1;
-                    LabInfo.Text = "获取成功，请复制使用！";
+                    UserEntity.Html = httpresult.Html;
+                    if(TxtAccount.InvokeRequired)
+                    {
+                        UpdateRegisterText urt = new UpdateRegisterText(RegisterSuccess);
+                        TxtAccount.Invoke(urt,UserEntity);
+                    }
+                    else
+                    {
+                        RegisterSuccess(UserEntity);
+                    }
                 }
                 else
                 {
@@ -81,6 +91,12 @@ namespace GetFreeVPNAccount
             {
                 LabInfo.Text = "获取失败，请重试！";
             }
+        }
+        public void RegisterSuccess(VPNEntity entity)
+        {
+            TxtAccount.Text = entity.Username;
+            TxtPassword.Text = entity.Password1;
+            LabInfo.Text = "获取成功，请复制使用！";
         }
     }
 }
