@@ -160,8 +160,7 @@
             // TssInfo
             // 
             this.TssInfo.Name = "TssInfo";
-            this.TssInfo.Size = new System.Drawing.Size(131, 17);
-            this.TssInfo.Text = "toolStripStatusLabel1";
+            this.TssInfo.Size = new System.Drawing.Size(0, 17);
             // 
             // TimeClock
             // 
