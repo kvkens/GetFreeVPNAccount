@@ -98,5 +98,10 @@ namespace GetFreeVPNAccount
             TxtPassword.Text = entity.Password1;
             LabInfo.Text = "获取成功，请复制使用！";
         }
+
+        private void TimeClock_Tick(object sender, EventArgs e)
+        {
+            TssInfo.Text = "系统时间：" + DateTime.Now.ToString("yyyy年MM月dd日 HH时mm分ss秒");
+        }
     }
 }
