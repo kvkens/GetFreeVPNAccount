@@ -100,6 +100,9 @@ namespace GetFreeVPNAccount
                 LabInfo.Text = "获取失败，请重试！";
             }
         }
+        /// <summary>
+        /// 检测升级
+        /// </summary>
         public void ExecuteUpdate()
         {
             httpitem.Referer = "http://www.imyy.org/SoftUpdate/GetFreeVPNAccount/update.html";
@@ -130,6 +133,7 @@ namespace GetFreeVPNAccount
             TxtAccount.Text = entity.Username;
             TxtPassword.Text = entity.Password1;
             LabInfo.Text = "获取成功，请复制使用！";
+            File.AppendAllText(".\\Log.log", "用户名：【" + entity.Username + "】 密码：【1234】\r\n");
             loading.Close();
         }
         public void CheckUpdateSuccess(string html)
