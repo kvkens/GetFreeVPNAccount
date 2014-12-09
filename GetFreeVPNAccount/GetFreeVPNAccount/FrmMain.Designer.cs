@@ -68,7 +68,7 @@
             // 
             this.LabInfo.AutoSize = true;
             this.LabInfo.ForeColor = System.Drawing.Color.Red;
-            this.LabInfo.Location = new System.Drawing.Point(183, 107);
+            this.LabInfo.Location = new System.Drawing.Point(24, 108);
             this.LabInfo.Name = "LabInfo";
             this.LabInfo.Size = new System.Drawing.Size(95, 12);
             this.LabInfo.TabIndex = 5;
@@ -182,6 +182,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "[远程VPN账号获取] WwW.ImYY.Org 荣誉出品";
             this.TopMost = true;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
