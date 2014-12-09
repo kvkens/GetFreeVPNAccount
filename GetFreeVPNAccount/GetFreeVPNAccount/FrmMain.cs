@@ -24,6 +24,7 @@ namespace GetFreeVPNAccount
         DotNet.Utilities.HttpItem httpitem = new DotNet.Utilities.HttpItem();
         DotNet.Utilities.HttpResult httpresult = new DotNet.Utilities.HttpResult();
         string version = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+        Loading loading = new Loading();
         public FrmMain()
         {
             InitializeComponent();
@@ -49,9 +50,10 @@ namespace GetFreeVPNAccount
         }
         private void BtnGetOneKey_Click(object sender, EventArgs e)
         {
+
             Thread GoOneKeyThread = new Thread(new ThreadStart(ExecuteOneKey));
             GoOneKeyThread.Start();
-            //ExecuteOneKey();
+            loading.ShowDialog();
         }
         public void ExecuteOneKey()
         {
@@ -97,6 +99,7 @@ namespace GetFreeVPNAccount
             TxtAccount.Text = entity.Username;
             TxtPassword.Text = entity.Password1;
             LabInfo.Text = "获取成功，请复制使用！";
+            loading.Close();
         }
 
         private void TimeClock_Tick(object sender, EventArgs e)
