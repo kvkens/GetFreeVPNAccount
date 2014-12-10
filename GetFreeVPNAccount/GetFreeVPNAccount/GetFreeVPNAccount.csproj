@@ -107,6 +107,7 @@
   <ItemGroup>
     <Content Include="20141205122824562_easyicon_net_128.ico" />
     <Content Include="20141205123537843_easyicon_net_72.ico" />
+    <Content Include="DownLoad\GetFreeVPNAccount.exe" />
     <Content Include="loading.gif" />
   </ItemGroup>
   <ItemGroup>
