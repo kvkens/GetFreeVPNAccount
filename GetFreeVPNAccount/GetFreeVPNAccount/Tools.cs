@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 
 namespace GetFreeVPNAccount
@@ -43,6 +44,11 @@ namespace GetFreeVPNAccount
             VPNEntity entity = new VPNEntity();
             string POSTData = string.Format("lang={0}&username={1}&password1={2}&password2={3}&mobile={4}&email={5}&srvid={6}&textarea={7}&acceptterms={8}&adduser={9}", entity.Lang, username, entity.Password1, entity.Password1, entity.Mobile, entity.Email, entity.Srvid, entity.Textarea, entity.Acceptterms, entity.Adduser);
             return POSTData;
+        }
+        public void DownLoadFile(string url,string path)
+        {
+            WebClient webclient = new WebClient();
+            webclient.DownloadFileAsync(new Uri(url), path);
         }
     }
 }

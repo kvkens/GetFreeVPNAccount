@@ -150,10 +150,11 @@ namespace GetFreeVPNAccount
                 LabInfo.Text = "发现新版本：" + html.Split('$')[0] + " 当前：" + version + " 版本介绍：" + whatnew;
                 if (MessageBox.Show("发现新版本：" + html.Split('$')[0] + " 当前：" + version + " 版本介绍：" + whatnew + "\n\n是否下载整合压缩包？", "发现新版本，是否更新！", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    Process process = new Process();
-                    process.StartInfo.FileName = "iexplore.exe";
-                    process.StartInfo.Arguments = downurl;
-                    process.Start();
+                    //Process process = new Process();
+                    //process.StartInfo.FileName = "iexplore.exe";
+                    //process.StartInfo.Arguments = downurl;
+                    //process.Start();
+                    tools.DownLoadFile(downurl, "./GetFreeVPNAccount-" + serverver + ".exe");
                 }
             }
         }
