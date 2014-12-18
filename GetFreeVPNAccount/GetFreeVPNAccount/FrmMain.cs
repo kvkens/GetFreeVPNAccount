@@ -19,7 +19,7 @@ namespace GetFreeVPNAccount
         public delegate void UpdateRegisterText(VPNEntity entity);
         public delegate void CheckUpdateSuccessDelegate(string html);
         public const string URL = "http://user.tosver.com/reg.php?cont=store_user";
-        public const string UPDATE_URL = "http://www.imyy.org/SoftUpdate/GetFreeVPNAccount/update.html";
+        public const string UPDATE_URL = "http://www.imyy.org/Services/SoftUpdate/GetFreeVPNAccount/Services.ashx";
         VPNEntity UserEntity = new VPNEntity();
         Tools tools = new Tools();
         DotNet.Utilities.HttpHelper httphelper = new DotNet.Utilities.HttpHelper();
