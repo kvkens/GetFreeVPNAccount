@@ -62,7 +62,7 @@
             this.groupBox1.Size = new System.Drawing.Size(403, 128);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "操作说明：点击【一键获取】就OK！ IP:106.187.93.193";
+            this.groupBox1.Text = "操作说明：点击【一键获取】就OK！ IP：jp3.toven.info";
             // 
             // LabInfo
             // 
